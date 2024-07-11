@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "push": "git add . && git commit -m 'new' && git push origin master"
   },
   "author": "",
   "license": "ISC",
