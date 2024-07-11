@@ -13,6 +13,7 @@ app.use(cors());
 bot.on('message', async (msg) => {
     const chatId = msg.chat.id;
     const text = msg.text;
+    console.log(msg);
 
     if (text === '/start') {
 
@@ -41,7 +42,6 @@ bot.on('message', async (msg) => {
 
     if(msg?.web_app_data?.data) {
 
-        console.log(msg);
         try {
             const data = JSON.parse(msg?.web_app_data?.data);
 
