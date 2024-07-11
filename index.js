@@ -10,8 +10,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-console.log('Юлечка');
-
 bot.on('message', async (msg) => {
     const chatId = msg.chat.id;
     const text = msg.text;
@@ -45,6 +43,7 @@ bot.on('message', async (msg) => {
 
         try {
             const data = JSON.parse(msg?.web_app_data?.data);
+            console.log(data)
 
             await bot.sendMessage(chatId, 'Спасибо за обратную связь!');
 
